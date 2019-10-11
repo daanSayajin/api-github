@@ -149,5 +149,3 @@ $btn_find.addEventListener('click', () => {
     if (username) 
         displayOnScreen($container, findUser(username), findUserRepos(username));
 });
-
-displayOnScreen($container, findUser('daanSayajin'), findUserRepos('daanSayajin'));
