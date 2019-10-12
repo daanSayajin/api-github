@@ -94,8 +94,7 @@ body, input {
 
 #data-container #user-data img {
     width: inherit;
-    border-radius: 3%;
-    border: solid 1px #1f1f1f;
+    border-radius: 2%;
     margin-bottom: 15px;
 }
 
