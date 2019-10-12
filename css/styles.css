@@ -148,10 +148,67 @@ body, input {
     border-bottom: solid 3px #ddd !important;
 }
 
+#data-container #tabs-menu span {
+    font-size: 12px;
+    background: #ddd;
+    color: #3b3b3b;
+    border-radius: 100%;
+    padding: 0 4px 1px 4px;
+    margin: 3.5px 0 0 5px;
+    position: absolute;
+}
+
 #data-container .tab-item {
     width: 100%;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+/* Two column and one column layouts */
+#data-container #tabs-data .two-column li,
+#data-container #tabs-data .one-column li {
+    height: 100px;
+    border: solid 1px #ddd;
+    padding: 18px;
+}
+
+#data-container #tabs-data .two-column li header,
+#data-container #tabs-data .one-column li header {
+    color: #0366d6;
+    margin-bottom: 28px;
+}
+
+#data-container #tabs-data .two-column li footer,
+#data-container #tabs-data .one-column li footer {
+    display: flex;
+    flex-direction: row;
+    color: #586069;
+    font-size: 14px;
+}
+
+#data-container #tabs-data .two-column li footer span,
+#data-container #tabs-data .one-column li footer span {
+    margin-right: 14px;
+}
+
+#data-container #tabs-data .two-column li footer span strong,
+#data-container #tabs-data .one-column li footer span strong {
+    font-size: 7px;
+    border-radius: 100%;
+    background: #0366d6;
+    color: transparent;
+    padding: 4px 2px 0 2px;
+}
+
+#data-container #tabs-data .two-column li footer svg,
+#data-container #tabs-data .one-column li footer svg {
+    margin-top: 1px;
+    margin-right: 4px;
+}
+
+#data-container #tabs-data .one-column li {
+    border: none;
+    border-bottom: solid 1px #ddd;
 }
 
 /* Repos data */
@@ -162,26 +219,36 @@ body, input {
     list-style: none;
 }
 
-#data-container #tabs-data #repos-data li {
-    height: 100px;
-    border: solid 1px #ddd;
-    padding: 18px;
+/* Stars data */
+#data-container #tabs-data #stars-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
 }
 
-#data-container #tabs-data #repos-data li header {
-    color: #0366d6;
-    margin-bottom: 28px;
+/* Followers/Following data */
+#data-container #tabs-data .follow-data {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
 }
 
-#data-container #tabs-data #repos-data li footer {
+#data-container #tabs-data .follow-data li {
     display: flex;
-    flex-direction: row;
-    color: #586069;
-    font-size: 14px;
+    flex-direction: row;   
 }
 
-#data-container #tabs-data #repos-data li footer svg {
-    margin-left: 15px;
+#data-container #tabs-data .follow-data li img {
+    width: 60px;
     margin-top: 1px;
-    margin-right: 4px;
+    margin-right: 25px;
+}
+
+#data-container #tabs-data .follow-data span {
+    height: 16px;
+    margin-top: 23px;
+} 
+
+#data-container #tabs-data .follow-data .redirect-user {
+    cursor: pointer;
 }
