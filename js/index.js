@@ -194,6 +194,8 @@ const displayOnScreen = ($container, username) => {
                         let users = document.querySelectorAll('.redirect-user');
                         users = Array.prototype.slice.call(users);
                         users.map(user => user.addEventListener('click', () => displayOnScreen($container, user.innerHTML) ));
+
+                        return true;
                     })
                 })
             })
