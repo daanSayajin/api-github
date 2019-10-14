@@ -57,7 +57,7 @@ const displayOnScreen = ($container, username) => {
             /* Add our element in DOM */
             $container.appendChild($dataContainer);
 
-            return 0;
+            return false;
         }
 
         findUserRepos(username).then( reposData => {
