@@ -86,7 +86,7 @@ const displayOnScreen = ($container, username) => {
                                     <nav id="tabs-menu">
                                         <ul>
                                             <li id="repositories" style="border-bottom: solid 3px #db773e !important;">Repositories <span>${userData.public_repos ? `${userData.public_repos}` : '0'}</span></li>
-                                            <li id="stars">Stars</li>
+                                            <li id="stars">Stars <span>${starsData.length > 0 ? `${starsData.length}` : '0'}</span></li>
                                             <li id="followers">Followers <span>${userData.followers ? `${userData.followers}` : '0'}</span></li>
                                             <li id="following">Following <span>${userData.following ? `${userData.following}` : '0'}</span></li>
                                         </ul>
