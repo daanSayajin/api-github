@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>GitHub - Documentation</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Roboto', Arial, Helvetica, sans-serif;
+                -webkit-font-smoothing: antialiased !important;
+                
+                max-width: 600px;
+
+                display: flex;
+                flex-direction: column;
+
+                padding-top: 20px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 30px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 25px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            li {
+                font-size: 18px;
+                margin-bottom: 40px;
+            }
+
+            li p {
+                font-size: 16px;
+                letter-spacing: 0.8px;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            #tutorial-steps li a {
+                color: #999;
+            }
+
+            span {
+                margin-bottom: 40px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Documentação - API GitHub</h1>
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#api-tutorial">Utilização da API</a></li>
+        </ul>
+
+        <span></span>
+
+        <h2 id="api-tutorial">Utilização da API</h2>
+        <ul id="tutorial-steps"  style="list-style: decimal;">
+            <li id="base-url"> URL base da API
+                <p>
+                    Para todas requisições utilizamos a URL <strong>http://api.github.com</strong>. A partir dela atribuimos os endpoints que falaremos abaixo
+                </p>
+            </li>
+            <li id="user-url"> Fazer a requisição das informações do usuário
+                <p>
+                    Utilizamos o endpoint <strong>users</strong> a partir da <a href="#base-url">URL base citada no 1º passo</a>. Além do endpoint <strong>users</strong> acrescentamos após ele o endpoint respectivo ao nome do usuário que queremos as informações. Nesse exemplo, resgatamos os dados do usuário daanSayajin <strong>https://api.github.com/users/daanSayajin</strong>
+                </p>
+            </li>
+            <li> Fazer a requisição dos repositórios do usuário
+                <p>
+                    Utilizamos o endpoint <strong>repos</strong> a partir da <a href="#user-url">URL do usuário citada no 2º passo</a>. Nesse exemplo, resgatamos os repositórios do usuário daanSayajin <strong>https://api.github.com/users/daanSayajin/repos</strong>
+                </p>
+            </li>
+            <li> Fazer a requisição dos repositórios que o usuário atribui uma estrela
+                <p>
+                    Utilizamos o endpoint <strong>starred</strong> a partir da <a href="#user-url">URL do usuário citada no 2º passo</a>. Nesse exemplo, resgatamos os repositórios que o usuário daanSayajin atribuiu uma estrela <strong>https://api.github.com/users/daanSayajin/starred</strong>
+                </p>
+            </li>
+
+            <li> Fazer a requisição dos seguidores do usuário
+                <p>
+                    Utilizamos o endpoint <strong>followers</strong> a partir da <a href="#user-url">URL do usuário citada no 2º passo</a>. Nesse exemplo, resgatamos os seguidores do usuário daanSayajin <strong>https://api.github.com/users/daanSayajin/followers</strong>  
+                </p>
+            </li>
+
+            <li> Fazer a requisição dos usuários que o usuário segue
+                <p>
+                    Utilizamos o endpoint <strong>following</strong> a partir da <a href="#user-url">URL do usuário citada no 2º passo</a>. Nesse exemplo, resgatamos os usuários que o usuário daanSayajin segue <strong>https://api.github.com/users/daanSayajin/following</strong>  
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

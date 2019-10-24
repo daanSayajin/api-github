@@ -14,12 +14,23 @@
             <img src="img/favicon_fff.png" />
             <form>
                 <input id="txt_user" type="text" placeholder="Username" />
-                <input id="btn_find" type="button" value="Find" />
+                <input id="btn_find" type="submit" value="Find" />
             </form>
         </header>
 
         <div id="container"></div>
 
+        <footer id="main-footer">
+            <a href="./documentation.html">Documentation</a>
+        </footer>
+
         <script src="js/index.js"></script>
+        <script>
+            const stopSubmitAction = event => {
+                event.preventDefault();
+            }
+                
+            document.getElementById('btn_find').addEventListener('click', stopSubmitAction);
+        </script>
     </body>
 </html>
